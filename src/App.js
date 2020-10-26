@@ -1,23 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
+import { Switch, Route, withRouter } from "react-router";
+import Home from './pages/home';
+import Blog from './pages/blog';
+import GlobalStyle from './assets/globalStyles';
+import GoogleFontLoader from "react-google-font-loader";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <GoogleFontLoader
+        fonts={[
+          {
+            font: 'Montserrat',
+            weights: [400, 500, 600, 700],
+          },
+        ]}
+        subsets={['cyrillic-ext', 'greek', 'latin']}
+      />
+      <GlobalStyle />
+      <Switch>
+        <Route path="/blog" component={Blog} />
+        <Route path="/" component={Home} />
+      </Switch>
     </div>
   );
 }
