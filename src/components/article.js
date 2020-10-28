@@ -22,7 +22,7 @@ const ArticleHeading = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: linear-gradient(to right bottom, ${variables.primaryGreenRGBA}, ${variables.greenSecondaryRGBA}), url(${props => props.image});
+    background-image: linear-gradient(to right bottom, ${variables.colorLightRGBA}, ${variables.colorLightSecondaryRGBA}), url(${props => props.image});
     position: relative;
 `;
 
@@ -33,7 +33,8 @@ const ArticleHeader = styled.h1`
     transform: translate(-50%, -50%);
     font-weight: 400;
     font-size: 3rem;
-    color: ${variables.colorLight};
+    font-weight: 500;
+    color: ${variables.textColorSecondary};
     margin: 0;
 `;
 
@@ -69,7 +70,7 @@ const Article = ({ header, content, image }) => {
     return (
         <ArticleWrapper>
             <ArticleHeading image={img}>
-                <ArticleHeader>{header}</ArticleHeader>
+                <ArticleHeader>"{header}"</ArticleHeader>
             </ArticleHeading>
             <ArticleContent>
                 {content}

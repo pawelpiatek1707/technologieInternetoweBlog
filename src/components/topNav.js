@@ -37,6 +37,7 @@ const NavButtons = styled.li`
         text-decoration: none;
         color: ${variables.textColorPrimary};
         transition: all .3s;
+        font-weight: 600;
 
         &:hover{
             color: ${variables.primaryGreen};
@@ -55,7 +56,7 @@ const TopNav = () => {
                 </Logo>
                 <NavButtons>
                     <NavLink to="/blog">Blog</NavLink>
-                    <NavLink to="#">About</NavLink>
+                    <NavLink to="/about">About</NavLink>
                 </NavButtons>
             </Navigation>
         </TopNavWrapper>

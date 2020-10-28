@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import vido1 from '../assets/videos/video.mp4';
 import vido2 from '../assets/videos/video.webm';
+import audio from '../assets/sounds/audio.wav';
 import TopNav from '../components/topNav';
 import * as variables from '../assets/variables';
 
@@ -20,6 +21,10 @@ const Video = styled.video`
   width: 100%;
   opacity: .15;
   z-index: -1;
+`;
+
+const Audio = styled.audio`
+    z-index: 5;
 `;
 
 const TopNavWrapper = styled.div`
@@ -68,6 +73,7 @@ const ContentButton = styled.button`
 const Home = () => {
     return (
         <HomeWrapper>
+           
             <Video autoPlay muted loop>
                 <source src={vido1} type="video/mp4"/>
                 <source src={vido2} type="video/webm"/>
