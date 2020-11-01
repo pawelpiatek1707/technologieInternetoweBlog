@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Zadanie 4.2
 
 Demo: [https://elastic-lovelace-f09ee2.netlify.app/](https://elastic-lovelace-f09ee2.netlify.app/)
 
